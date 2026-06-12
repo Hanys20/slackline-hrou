@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slackline Hrou – Rovnováha, která baví.</title>
+  <meta name="description" content="Slackline programy pro školy, firmy a veřejné akce. Přivážíme slackline, giboardy a pohybové hry. Program na míru, zkušený tým, bezpečnost na prvním místě." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/SVG_Ikona-hlava.svg" />
+
+  <!-- Fallback Google Fonts (pokud Adobe Fonts není k dispozici) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" /></noscript>
+
+  <link rel="preload" as="image" href="assets/images/hero/hero-slackline-divka.webp" />
+
+  <link rel="stylesheet" href="assets/css/variables.min.css" />
+  <link rel="stylesheet" href="assets/css/nav.min.css" />
+  <link rel="stylesheet" href="assets/css/homepage.min.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     NAVIGACE
+══════════════════════════════════ -->
+<nav class="site-nav" role="navigation" aria-label="Hlavní navigace">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Slackline Hrou – domů">
+        <img src="assets/images/icons/HLAVNI LOGO.svg" alt="Slackline Hrou" class="nav-logo-img" width="160" height="48" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Domů</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Nabídka
+            <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <a href="pages/pro-skoly.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">🏫</div>
+              <div><span class="nav-dropdown-title">Pro školy</span><span class="nav-dropdown-desc">Workshopy, sportovní dny, tábory</span></div>
+            </a>
+            <a href="pages/pro-firmy.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">🤝</div>
+              <div><span class="nav-dropdown-title">Pro firmy</span><span class="nav-dropdown-desc">Teambuildingy a firemní akce</span></div>
+            </a>
+            <a href="pages/pro-verejnost.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">🎪</div>
+              <div><span class="nav-dropdown-title">Pro veřejnost</span><span class="nav-dropdown-desc">Festivaly a dny měst</span></div>
+            </a>
+          </div>
+        </li>
+        <li><a href="pages/o-mne.html">O mně</a></li>
+        <li><a href="pages/o-slackline.html">O slackline</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#kontakt" class="btn btn-primary">Poptat program</a>
+      </div>
+      <div class="nav-social" aria-label="Sociální sítě">
+        <a href="https://wa.me/420776665913" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.854L.057 23.26a1 1 0 001.223 1.223l5.406-1.467A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.034-1.383l-.36-.213-3.73 1.013 1.013-3.73-.213-.36A9.812 9.812 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg></a>
+        <a href="https://www.instagram.com/slacklinehrou/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@Slacklinehrou" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+      </div>
+      <button class="nav-hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobilní menu -->
+<div class="nav-mobile" role="dialog" aria-label="Mobilní navigace">
+  <a href="index.html"><span class="mobile-nav-icon">🏠</span> Domů</a>
+  <div class="mobile-nav-group">
+    <button class="mobile-nav-group-trigger" aria-expanded="false">
+      <span class="mobile-nav-group-trigger-label"><span class="mobile-nav-icon">🎯</span> Nabídka</span>
+      <svg class="mobile-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="mobile-nav-sub">
+      <a href="pages/pro-skoly.html"><span class="mobile-nav-sub-icon">🏫</span> Pro školy</a>
+      <a href="pages/pro-firmy.html"><span class="mobile-nav-sub-icon">🤝</span> Pro firmy</a>
+      <a href="pages/pro-verejnost.html"><span class="mobile-nav-sub-icon">🎪</span> Pro veřejnost</a>
+    </div>
+  </div>
+  <div class="mobile-nav-divider"></div>
+  <a href="pages/o-mne.html"><span class="mobile-nav-icon">👤</span> O mně</a>
+  <a href="pages/o-slackline.html"><span class="mobile-nav-icon">🪢</span> O slackline</a>
+  <div class="mobile-social">
+    <a href="https://wa.me/420776665913" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.854L.057 23.26a1 1 0 001.223 1.223l5.406-1.467A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.034-1.383l-.36-.213-3.73 1.013 1.013-3.73-.213-.36A9.812 9.812 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg></a>
+    <a href="https://www.instagram.com/slacklinehrou/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@Slacklinehrou" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+  </div>
+</div>
+
+<main>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Levá část – obsah -->
+      <div class="hero-content">
+        <div class="hero-badge anim-fade-up">
+          <span class="badge">⚡ Pohyb, který spojuje</span>
+        </div>
+
+        <h1 class="hero-title display-heading anim-fade-up delay-1" id="hero-title">
+          Program máme<br>
+          <span class="accent">nalajnovaný</span>
+        </h1>
+
+        <p class="hero-subtitle anim-fade-up delay-2">
+          Slackline, giboardy a pohybové programy pro školy, firemní akce, festivaly i sportovní dny. Přivezeme aktivitu, která baví děti i dospělé a promění každou akci v zážitek.
+        </p>
+
+        <div class="hero-ctas anim-fade-up delay-3">
+          <a href="#kontakt" class="btn btn-primary btn-lg">Nezávazně poptat program</a>
+          <a href="#nabidka" class="btn btn-outline btn-lg">Zobrazit nabídku</a>
+        </div>
+      </div>
+
+      <!-- Pravá část – obrázek -->
+      <div class="hero-image-wrap anim-fade-up delay-2">
+        <div class="hero-visual-group">
+          <div class="hero-image-blob blob-mask-5">
+            <img src="assets/images/hero/hero-slackline-divka.webp" alt="Terka balancuje na slacklině" style="width:100%;height:100%;object-fit:cover;object-position:75% top;" width="1920" height="1277" />
+          </div>
+          <!-- Cedule lenochod – vpravo dole u fotky -->
+          <div aria-hidden="true" class="hero-cedule">
+            <img src="assets/images/icons/SVG_Cedule.svg" alt="" loading="lazy" width="220" height="220" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lenochod přechod: hero → stats -->
+<div class="sloth-divider--boundary" aria-hidden="true">
+  <div class="sloth-divider--boundary-inner">
+    <img class="sloth-img--desktop" src="assets/images/icons/SVG_Zavěšený delší.svg" alt="" loading="lazy" width="220" height="220" />
+    <img class="sloth-img--mobile" src="assets/images/icons/SVG_Zavěšený kratší.svg" alt="" loading="lazy" width="220" height="220" />
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     STATS / DASHBOARD
+══════════════════════════════════ -->
+<section class="stats-section" aria-labelledby="stats-title" style="position:relative;z-index:1;">
+  <div class="container">
+    <div class="stats-header">
+      <h2 class="section-title" id="stats-title">Proč <span class="accent">právě my?</span></h2>
+      <p class="section-subtitle">Jsme nadšenci do pohybu, kteří spojují zkušenosti, bezpečnost a zábavu do programů pro děti i dospělé.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#68aa31;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div class="stat-number"><span data-counter="10" data-suffix="+">10+</span></div>
+        <div class="stat-label">Let zkušeností</div>
+        <div class="stat-desc">Aktivně provozujeme slackline a předáváme radost z pohybu.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#4A2012;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="stat-number"><span data-counter="20" data-suffix="+">20+</span></div>
+        <div class="stat-label">Školních workshopů</div>
+        <div class="stat-desc">Realizované workshopy pro MŠ, ZŠ a SŠ.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#4e8125;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="stat-number">Desítky</div>
+        <div class="stat-label">Realizovaných akcí</div>
+        <div class="stat-desc">Festivaly, adaptační kurzy, sportovní dny a veřejné akce.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="background:#b5670d;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="stat-number">Licence B</div>
+        <div class="stat-label">Certifikovaný trenér</div>
+        <div class="stat-desc">Druhý nejvyšší stupeň trenérské kvalifikace.</div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     NABÍDKA (3 karty)
+══════════════════════════════════ -->
+<section class="offer-section" id="nabidka" aria-labelledby="offer-title" style="position:relative;z-index:1;">
+  <div class="container">
+    <div class="offer-header">
+      <h2 class="section-title" id="offer-title">Zážitek, na který <span class="accent" style="white-space:nowrap;">se&nbsp;stojí&nbsp;fronta</span></h2>
+      <p class="section-subtitle" style="margin:var(--space-3) auto 0;">Program, který rozhýbe vaši akci a přitáhne pozornost napříč generacemi.</p>
+    </div>
+
+    <div class="offer-grid">
+
+      <!-- Pro školy -->
+      <article class="offer-card">
+        <div class="offer-card-image">
+          <img src="assets/images/hero/offer-skoly.webp" alt="Slackline pro školy – pohybový program s dětmi" loading="lazy" width="800" height="533" />
+        </div>
+        <div class="offer-card-body">
+          <h3 class="offer-card-title">Pro školy</h3>
+          <p class="offer-card-desc">Programy pro MŠ, ZŠ, SŠ, adaptační kurzy, tábory, příměstské tábory a sportovní dny.</p>
+          <a href="pages/pro-skoly.html" class="btn btn-primary">Zjistit více</a>
+        </div>
+      </article>
+
+      <!-- Pro firmy -->
+      <article class="offer-card">
+        <div class="offer-card-image">
+          <img src="assets/images/hero/offer-firmy.webp" alt="Slackline pro firmy – teambuilding a firemní akce" loading="lazy" width="800" height="533" />
+        </div>
+        <div class="offer-card-body">
+          <h3 class="offer-card-title">Pro firmy</h3>
+          <p class="offer-card-desc">Teambuildingy, firemní akce, dny rodin, zaměstnanecké akce a programy na podporu spolupráce.</p>
+          <a href="pages/pro-firmy.html" class="btn btn-primary">Zjistit více</a>
+        </div>
+      </article>
+
+      <!-- Pro veřejnost -->
+      <article class="offer-card">
+        <div class="offer-card-image">
+          <img src="assets/images/hero/offer-verejnost.webp" alt="Slackline pro veřejnost – festivaly a veřejné akce" loading="lazy" width="800" height="450" />
+        </div>
+        <div class="offer-card-body">
+          <h3 class="offer-card-title">Pro veřejnost</h3>
+          <p class="offer-card-desc">Festivaly, dětské dny, dny měst a obcí, sportovní akce a venkovní komunitní programy.</p>
+          <a href="pages/pro-verejnost.html" class="btn btn-primary">Zjistit více</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lenochod přechod: nabídka → recenze -->
+<div class="sloth-divider--boundary" aria-hidden="true">
+  <div class="sloth-divider--boundary-inner">
+    <img class="sloth-img--desktop" src="assets/images/icons/SVG_Spíci delší.svg" alt="" loading="lazy" width="220" height="220" />
+    <img class="sloth-img--mobile" src="assets/images/icons/SVG_Spíci kratší.svg" alt="" loading="lazy" width="220" height="220" />
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     RECENZE + PARTNEŘI
+══════════════════════════════════ -->
+<section class="reviews-section" aria-labelledby="reviews-title" style="position:relative;z-index:1;padding-top:var(--space-16);">
+  <div class="container">
+
+    <div class="reviews-header" style="margin-bottom:var(--space-8);">
+      <h2 class="section-title" id="reviews-title">Co říkají <span class="accent">ti, kteří to zažili</span></h2>
+      <p class="section-subtitle" style="margin-top:var(--space-3);">Nejlepší odměnou jsou úsměvy, nadšení a chuť zkusit to znovu.</p>
+    </div>
+
+    <div class="reviews-carousel">
+      <div class="reviews-outer">
+        <button class="reviews-nav-btn" id="reviews-prev" aria-label="Předchozí recenze"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <div class="reviews-track">
+
+        <article class="review-card">
+          <p class="review-text">Děti byly nadšené a u slackline se tvořila fronta celý den. Skvělá organizace, bezpečný průběh a profesionální přístup.</p>
+          <span class="review-source">Sportovní den · ZŠ</span>
+          <div class="review-author">
+            <img src="assets/images/icons/Slackline hrou_Recenze-61.svg" alt="" loading="lazy" class="review-avatar-img" />
+            <span class="review-initials-text">Tomáš</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <p class="review-text">Program krásně rozhýbal studenty a pomohl prolomit počáteční bariéry mezi spolužáky.</p>
+          <span class="review-source">Adaptační kurz · SŠ</span>
+          <div class="review-author">
+            <img src="assets/images/icons/Slackline hrou_Recenze-62.svg" alt="" loading="lazy" class="review-avatar-img" />
+            <span class="review-initials-text">Petra</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <p class="review-text">Jedno z nejnavštěvovanějších stanovišť celé akce. Zapojovaly se děti i dospělí a atmosféra byla výborná.</p>
+          <span class="review-source">Veřejný festival</span>
+          <div class="review-author">
+            <img src="assets/images/icons/Slackline hrou_Recenze-63.svg" alt="" loading="lazy" class="review-avatar-img" />
+            <span class="review-initials-text">Martin</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <p class="review-text">Slackline byl hit celého firemního dne. Kolegové se podporovali, smáli se a bavili jako nikdy. Příští rok určitě zase!</p>
+          <span class="review-source">Firemní teambuilding</span>
+          <div class="review-author">
+            <img src="assets/images/icons/Slackline hrou_Recenze-64.svg" alt="" loading="lazy" class="review-avatar-img" />
+            <span class="review-initials-text">Jakub</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <p class="review-text">Program dokonale zapadl do programu tábora. Děti nebylo možné od slackline odtrhnout ani po skončení lekce.</p>
+          <span class="review-source">Příměstský tábor</span>
+          <div class="review-author">
+            <img src="assets/images/icons/Slackline hrou_Recenze-65.svg" alt="" loading="lazy" class="review-avatar-img" />
+            <span class="review-initials-text">Lucie</span>
+          </div>
+        </article>
+
+        </div>
+        <button class="reviews-nav-btn" id="reviews-next" aria-label="Následující recenze"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="reviews-dots" id="reviews-dots"></div>
+      </div>
+    </div>
+
+    <!-- Partneři / loga -->
+    <div class="partners-bar">
+      <div class="partners-title">Kde jsme působili</div>
+      <div class="partners-logos">
+        <span class="partner-logo partner-logo-img"><img src="assets/images/logos/partneri/slunovrat-opava.webp" alt="Slunovrat Opava" loading="lazy" width="3027" height="1777" /></span>
+        <span class="partner-logo partner-logo-img"><img src="assets/images/logos/partneri/festival-z-lasky-opavy.webp" alt="Festival z lásky Opavy" loading="lazy" width="1080" height="1080" /><span class="partner-logo-name">Festival z lásky</span></span>
+        <span class="partner-logo partner-logo-img"><img src="assets/images/logos/partneri/obec-stitina.webp" alt="Obec Štítina" class="logo-lg" loading="lazy" width="300" height="300" /></span>
+        <span class="partner-logo partner-logo-img"><img src="assets/images/logos/partneri/mesto-klatovy.webp" alt="Město Klatovy" class="logo-lg" loading="lazy" width="567" height="567" /></span>
+        <span class="partner-logo partner-logo-img"><img src="assets/images/logos/partneri/ss-husova.webp" alt="SŠ Husova Opava" loading="lazy" width="287" height="135" /></span>
+        <span class="partner-logo partner-logo-img"><img src="assets/images/logos/partneri/male-hostice-znak.svg" alt="Obec Malé Hoštice" loading="lazy" width="120" height="60" /></span>
+        <span class="partner-logo" style="opacity:0.5;font-style:italic;">a mnoho dalších…</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     CITÁTOVÁ SEKCE
+══════════════════════════════════ -->
+<section class="quote-section" aria-label="Inspirativní citát">
+  <div class="container">
+    <div class="quote-blob">
+      <div>
+        <p class="quote-text"><span style="opacity:0.7;">„Tady se nemusíš bát</span><br><span class="quote-big">udělat krok vedle."</span></p>
+      </div>
+      <div aria-hidden="true" class="quote-mascot">
+        <img src="assets/images/icons/SVG_meditace.svg" alt="" loading="lazy" style="width:220px;height:auto;opacity:0.9;" width="220" height="220" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     KONTAKTNÍ FORMULÁŘ
+══════════════════════════════════ -->
+<section class="contact-section" id="kontakt" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-inner">
+
+      <!-- Info vlevo -->
+      <div class="contact-info">
+        <h2 class="section-title" id="contact-title">Napište <span class="accent">nám</span></h2>
+        <p>Plánujete školní den, firemní akci nebo festival? Napište nám a společně vymyslíme program na míru.</p>
+
+        <div class="contact-info-bottom">
+          <div class="contact-details">
+            <a href="tel:+420776665913" class="contact-detail">
+              <div class="contact-detail-icon" style="background:#68aa31;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail-label">Telefon</div>
+                <div class="contact-detail-value">+420 776 665 913</div>
+              </div>
+            </a>
+            <a href="mailto:info@slacklinehrou.cz" class="contact-detail">
+              <div class="contact-detail-icon" style="background:#4A2012;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail-label">E-mail</div>
+                <div class="contact-detail-value">info@slacklinehrou.cz</div>
+              </div>
+            </a>
+            <div class="contact-detail">
+              <div class="contact-detail-icon" style="background:#4e8125;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-detail-label">Kde působíme</div>
+                <div class="contact-detail-value">po celé ČR</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-tips-box" style="margin-top:var(--space-3);">
+          <h3 class="contact-tips-title">Co napsat do zprávy?</h3>
+          <ul class="contact-tips-list">
+            <li>termín akce</li>
+            <li>místo konání</li>
+            <li>přibližný počet účastníků</li>
+            <li>typ akce (škola, firma, festival…)</li>
+            <li>vaše představa nebo požadavek</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- Formulář vpravo -->
+      <div class="contact-form-wrap">
+        <div class="contact-cedule" aria-hidden="true"><img src="assets/images/icons/SVG_Kontakt.svg" alt="" loading="lazy" width="220" height="220" /></div>
+        <h3 class="contact-form-title">Nezávazná poptávka</h3>
+        <form class="contact-form" action="https://formspree.io/f/xojzkvwv" method="POST" novalidate>
+
+          <!-- Typ akce -->
+          <div class="form-group">
+            <label style="font-size:var(--text-sm);font-weight:700;color:var(--color-brown);display:flex;align-items:center;gap:var(--space-3);">
+              Typ akce
+              <span style="font-weight:400;color:var(--color-text-light);font-size:var(--text-xs);text-transform:none;letter-spacing:0;">— vyber jednu možnost</span>
+            </label>
+            <div class="form-type-selector">
+              <label class="type-opt">
+                <input type="radio" name="typ-akce" value="skoly">
+                <span class="type-opt-inner">
+                  <span class="type-opt-icon">🏫</span>
+                  <span class="type-opt-label">Pro školy</span>
+                </span>
+              </label>
+              <label class="type-opt">
+                <input type="radio" name="typ-akce" value="firmy">
+                <span class="type-opt-inner">
+                  <span class="type-opt-icon">🤝</span>
+                  <span class="type-opt-label">Pro firmy</span>
+                </span>
+              </label>
+              <label class="type-opt">
+                <input type="radio" name="typ-akce" value="verejnost">
+                <span class="type-opt-inner">
+                  <span class="type-opt-icon">🎪</span>
+                  <span class="type-opt-label">Pro veřejnost</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Jméno a příjmení *</label>
+              <input type="text" id="contact-name" name="name" placeholder="Vaše jméno" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Telefon</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="+420 xxx xxx xxx" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">E-mail *</label>
+            <input type="email" id="contact-email" name="email" placeholder="vas@email.cz" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Zpráva *</label>
+            <textarea id="contact-message" name="message" placeholder="Napište nám, co plánujete a co byste si přáli zažít…" required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-lg">Odeslat poptávku</button>
+          </div>
+          <p style="font-size:var(--text-xs);color:var(--color-text-light);margin-top:var(--space-3);text-align:center;">🔒 Vaše údaje jsou u nás v bezpečí. Ozveme se co nejdříve!</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer class="site-footer" aria-label="Zápatí stránky">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/images/icons/SVG_Logo textové.svg" alt="Slackline Hrou" loading="lazy" style="max-width:260px;width:100%;height:auto;margin-bottom:var(--space-4);" width="160" height="48" />
+        <p class="footer-brand-desc">Přivážíme slackline, giboardy a pohybové hry na školy, firmy, festivaly a veřejné akce. Rovnováha, která baví.</p>
+        <div class="footer-social" aria-label="Sociální sítě">
+          <a href="https://wa.me/420776665913" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.854L.057 23.26a1 1 0 001.223 1.223l5.406-1.467A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.034-1.383l-.36-.213-3.73 1.013 1.013-3.73-.213-.36A9.812 9.812 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/slacklinehrou/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Slacklinehrou" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Nabídka</h4>
+        <ul>
+          <li><a href="pages/pro-skoly.html">Pro školy</a></li>
+          <li><a href="pages/pro-firmy.html">Pro firmy</a></li>
+          <li><a href="pages/pro-verejnost.html">Pro veřejnost</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>O nás</h4>
+        <ul>
+          <li><a href="pages/o-mne.html">Kdo jsme</a></li>
+          <li><a href="pages/o-slackline.html">Co je slackline</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+420776665913" class="contact-item">+420 776 665 913</a></li>
+          <li><a href="mailto:info@slacklinehrou.cz" class="contact-item">info@slacklinehrou.cz</a></li>
+          <li><span class="contact-item">Působíme po celé ČR</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="footer-year">2026</span> Slackline Hrou. Všechna práva vyhrazena.</span>
+      <a href="pages/ochrana-osobnich-udaju.html" class="footer-bottom-link">Ochrana osobních údajů</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.min.js"></script>
+</body>
+</html>

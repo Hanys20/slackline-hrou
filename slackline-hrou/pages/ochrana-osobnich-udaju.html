@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ochrana osobních údajů – Slackline Hrou</title>
+  <meta name="description" content="Informace o zpracování osobních údajů v souladu s nařízením GDPR (EU) 2016/679." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/icons/SVG_Ikona-hlava.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" /></noscript>
+  <link rel="stylesheet" href="../assets/css/variables.min.css" />
+  <link rel="stylesheet" href="../assets/css/nav.min.css" />
+  <link rel="stylesheet" href="../assets/css/subpages.min.css" />
+  <style>
+    .gdpr-page {
+      background: var(--color-cream);
+      padding: var(--space-16) 0 var(--space-20);
+    }
+    .gdpr-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .gdpr-page-title {
+      font-family: var(--font-display);
+      font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+      color: var(--color-brown);
+      line-height: 1.15;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+    }
+    .gdpr-page-title .accent { color: var(--color-green); }
+    .gdpr-meta {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+      margin-bottom: var(--space-10);
+      padding-bottom: var(--space-8);
+      border-bottom: 1.5px solid var(--color-beige-dark);
+    }
+
+    .gdpr-controller-box {
+      background: var(--color-beige);
+      border: 1.5px solid var(--color-beige-dark);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6) var(--space-8);
+      margin-bottom: var(--space-10);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2) var(--space-8);
+    }
+    .gdpr-controller-box h3 {
+      grid-column: 1 / -1;
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--color-brown);
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+    .gdpr-controller-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .gdpr-controller-row .label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--color-text-light);
+    }
+    .gdpr-controller-row .value {
+      font-size: var(--text-sm);
+      color: var(--color-text);
+      font-weight: 600;
+    }
+    .gdpr-controller-row a {
+      color: var(--color-green);
+      text-decoration: none;
+    }
+    .gdpr-controller-row a:hover { text-decoration: underline; }
+
+    .gdpr-section {
+      margin-bottom: var(--space-10);
+    }
+    .gdpr-section h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      color: var(--color-brown);
+      text-transform: uppercase;
+      margin-bottom: var(--space-4);
+      padding-bottom: var(--space-3);
+      border-bottom: 2px solid var(--color-green-pale);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .gdpr-section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--color-green);
+      color: var(--color-white);
+      border-radius: 50%;
+      font-size: var(--text-sm);
+      font-family: var(--font-body);
+      font-weight: 800;
+    }
+    .gdpr-section p {
+      font-size: var(--text-base);
+      color: var(--color-text-light);
+      line-height: 1.85;
+      margin-bottom: var(--space-4);
+    }
+    .gdpr-section p:last-child { margin-bottom: 0; }
+    .gdpr-section ul, .gdpr-section ol {
+      margin: var(--space-3) 0 var(--space-4) var(--space-5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+    .gdpr-section li {
+      font-size: var(--text-base);
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+    .gdpr-section strong { color: var(--color-text); font-weight: 700; }
+
+    .gdpr-highlight {
+      background: var(--color-green-pale);
+      border-left: 3px solid var(--color-green);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-4) 0;
+    }
+    .gdpr-highlight p {
+      margin-bottom: 0;
+      font-size: var(--text-sm);
+    }
+
+    .gdpr-rights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+      margin-top: var(--space-4);
+    }
+    .gdpr-right-card {
+      background: var(--color-white);
+      border: 1.5px solid var(--color-beige-dark);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4) var(--space-5);
+    }
+    .gdpr-right-card strong {
+      display: block;
+      color: var(--color-brown);
+      margin-bottom: var(--space-1);
+    }
+    .gdpr-right-card span {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .gdpr-controller-box { grid-template-columns: 1fr; }
+      .gdpr-rights-grid { grid-template-columns: 1fr; }
+      .gdpr-section h2 { font-size: var(--text-xl); }
+      .gdpr-controller-box { padding: var(--space-5); }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Hlavní navigace">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Slackline Hrou – domů">
+        <img src="../assets/images/icons/HLAVNI LOGO.svg" alt="Slackline Hrou" class="nav-logo-img" width="160" height="48" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Domů</a></li>
+        <li class="nav-item has-dropdown">
+          <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Nabídka
+            <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu">
+            <a href="pro-skoly.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">🏫</div>
+              <div><span class="nav-dropdown-title">Pro školy</span><span class="nav-dropdown-desc">Workshopy, sportovní dny, tábory</span></div>
+            </a>
+            <a href="pro-firmy.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">🤝</div>
+              <div><span class="nav-dropdown-title">Pro firmy</span><span class="nav-dropdown-desc">Teambuildingy a firemní akce</span></div>
+            </a>
+            <a href="pro-verejnost.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">🎪</div>
+              <div><span class="nav-dropdown-title">Pro veřejnost</span><span class="nav-dropdown-desc">Festivaly a dny měst</span></div>
+            </a>
+          </div>
+        </li>
+        <li><a href="o-mne.html">O mně</a></li>
+        <li><a href="o-slackline.html">O slackline</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="../index.html#kontakt" class="btn btn-primary">Poptat program</a>
+      </div>
+      <div class="nav-social" aria-label="Sociální sítě">
+        <a href="https://wa.me/420776665913" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.854L.057 23.26a1 1 0 001.223 1.223l5.406-1.467A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.034-1.383l-.36-.213-3.73 1.013 1.013-3.73-.213-.36A9.812 9.812 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg></a>
+        <a href="https://www.instagram.com/slacklinehrou/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@Slacklinehrou" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+      </div>
+      <button class="nav-hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile" role="dialog" aria-label="Mobilní navigace">
+  <a href="../index.html"><span class="mobile-nav-icon">🏠</span> Domů</a>
+  <div class="mobile-nav-group">
+    <button class="mobile-nav-group-trigger" aria-expanded="false">
+      <span class="mobile-nav-group-trigger-label"><span class="mobile-nav-icon">🎯</span> Nabídka</span>
+      <svg class="mobile-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="mobile-nav-sub">
+      <a href="pro-skoly.html"><span class="mobile-nav-sub-icon">🏫</span> Pro školy</a>
+      <a href="pro-firmy.html"><span class="mobile-nav-sub-icon">🤝</span> Pro firmy</a>
+      <a href="pro-verejnost.html"><span class="mobile-nav-sub-icon">🎪</span> Pro veřejnost</a>
+    </div>
+  </div>
+  <div class="mobile-nav-divider"></div>
+  <a href="o-mne.html"><span class="mobile-nav-icon">👤</span> O mně</a>
+  <a href="o-slackline.html"><span class="mobile-nav-icon">🪢</span> O slackline</a>
+  <div class="mobile-social">
+    <a href="https://wa.me/420776665913" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.854L.057 23.26a1 1 0 001.223 1.223l5.406-1.467A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.034-1.383l-.36-.213-3.73 1.013 1.013-3.73-.213-.36A9.812 9.812 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg></a>
+    <a href="https://www.instagram.com/slacklinehrou/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    <a href="https://www.youtube.com/@Slacklinehrou" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+  </div>
+</div>
+
+<main>
+  <section class="gdpr-page" aria-labelledby="gdpr-title">
+    <div class="container">
+      <div class="gdpr-inner">
+
+        <h1 class="gdpr-page-title" id="gdpr-title">Ochrana <span class="accent">osobních údajů</span></h1>
+        <p class="gdpr-meta">Informace o zpracování osobních údajů dle nařízení Evropského parlamentu a Rady (EU) 2016/679 (GDPR) a zákona č. 110/2019 Sb., o zpracování osobních údajů. Poslední aktualizace: červen 2026.</p>
+
+        <!-- Správce -->
+        <div class="gdpr-controller-box">
+          <h3>Správce osobních údajů</h3>
+          <div class="gdpr-controller-row">
+            <span class="label">Jméno a příjmení</span>
+            <span class="value">Tereza Střílková</span>
+          </div>
+          <div class="gdpr-controller-row">
+            <span class="label">IČO</span>
+            <span class="value">19505167</span>
+          </div>
+          <div class="gdpr-controller-row">
+            <span class="label">Sídlo</span>
+            <span class="value">Příčná 220, 747 91 Štítina</span>
+          </div>
+          <div class="gdpr-controller-row">
+            <span class="label">E-mail</span>
+            <span class="value"><a href="mailto:info@slacklinehrou.cz">info@slacklinehrou.cz</a></span>
+          </div>
+          <div class="gdpr-controller-row">
+            <span class="label">Telefon</span>
+            <span class="value"><a href="tel:+420776665913">+420 776 665 913</a></span>
+          </div>
+          <div class="gdpr-controller-row">
+            <span class="label">Webové stránky</span>
+            <span class="value">slacklinehrou.cz</span>
+          </div>
+        </div>
+
+        <!-- 1 -->
+        <div class="gdpr-section">
+          <h2><span class="num">1</span> Jaké osobní údaje zpracováváme</h2>
+          <p>Zpracováváme pouze osobní údaje, které nám sami sdělíte — zejména prostřednictvím kontaktního formuláře na těchto stránkách. Jedná se o:</p>
+          <ul>
+            <li>Jméno a příjmení</strong> — za účelem oslovení a identifikace poptávajícího</li>
+            <li>E-mailová adresa</strong> — za účelem odpovědi na poptávku</li>
+            <li>Telefonní číslo</strong> (nepovinné) — za účelem rychlé komunikace</li>
+            <li>Obsah zprávy / poptávky</strong> — popis požadavku, termínu, počtu účastníků apod.</li>
+            <li>Typ poptávky</strong> (školy, firmy, veřejnost) — pro zařazení poptávky ke správné nabídce</li>
+          </ul>
+          <p>Nepožadujeme a neshromažďujeme rodná čísla, platební údaje, citlivé osobní údaje ani údaje o dětech.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="gdpr-section">
+          <h2><span class="num">2</span> Účely zpracování a právní základy</h2>
+          <p>Vaše osobní údaje zpracováváme výhradně pro tyto účely:</p>
+          <ul>
+            <li>
+              Vyřízení poptávky a předsmluvní jednání</strong> — odpověď na Vaši poptávku, zaslání nabídky, dohodnutí termínu a podmínek spolupráce.<br />
+              Právní základ: <em>čl. 6 odst. 1 písm. b) GDPR</em> — zpracování nezbytné pro plnění smlouvy nebo pro provedení opatření přijatých před uzavřením smlouvy na žádost subjektu údajů.
+            </li>
+            <li>
+              Plnění smlouvy a realizace programu</strong> — zajištění domluvené akce, komunikace v průběhu přípravy a realizace.<br />
+              Právní základ: <em>čl. 6 odst. 1 písm. b) GDPR</em>.
+            </li>
+            <li>
+              Oprávněný zájem správce</strong> — archivace komunikace pro případ budoucích dotazů nebo reklamací.<br />
+              Právní základ: <em>čl. 6 odst. 1 písm. f) GDPR</em>.
+            </li>
+          </ul>
+          <p>Vaše údaje nepoužíváme k marketingovým účelům, nesdílíme je se třetími stranami za účelem reklamy</strong> a nevytváříme profilování ani automatizované rozhodování.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="gdpr-section">
+          <h2><span class="num">3</span> Příjemci a zpracovatelé osobních údajů</h2>
+          <p>Kontaktní formulář na tomto webu využívá službu Formspree</strong> (Formspree Inc., USA), která technicky zajišťuje doručení zpráv. Formspree vystupuje jako zpracovatel osobních údajů na základě smlouvy o zpracování.</p>
+          <div class="gdpr-highlight">
+            <p>Formspree Inc. je certifikován v rámci Data Privacy Framework EU–USA, který zajišťuje přiměřenou úroveň ochrany při přenosu osobních údajů do USA ve smyslu čl. 45 GDPR. Více informací: formspree.io/legal/privacy-policy</strong>.</p>
+          </div>
+          <p>Po doručení zprávy jsou data uložena v naší e-mailové schránce. Jiným osobám ani organizacím Vaše údaje neposkytujeme, s výjimkou zákonné povinnosti (např. na základě rozhodnutí orgánů veřejné moci).</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="gdpr-section">
+          <h2><span class="num">4</span> Doba uchovávání osobních údajů</h2>
+          <ul>
+            <li>Poptávky, které nevedly ke spolupráci</strong> — uchováváme po dobu 1 roku od přijetí poptávky, poté jsou vymazány.</li>
+            <li>Poptávky, které vedly k uzavření smlouvy</strong> — uchováváme po dobu trvání smluvního vztahu a dále po dobu 3 let od jeho skončení (z důvodu oprávněného zájmu, případných reklamací a nároků).</li>
+            <li>Daňové doklady a účetní záznamy</strong> — uchováváme po dobu stanovenou právními předpisy (zpravidla 5–10 let).</li>
+          </ul>
+          <p>Po uplynutí doby uchovávání jsou osobní údaje bezpečně vymazány.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="gdpr-section">
+          <h2><span class="num">5</span> Cookies a analytické nástroje</h2>
+          <p>Tento web nepoužívá reklamní ani analytické cookies</strong> (Google Analytics, Facebook Pixel ani podobné nástroje).</p>
+          <p>Web načítá písma Google Fonts ze serverů Google LLC (USA). Při načtení stránky může docházet k přenosu IP adresy na servery Google v rámci standardního fungování HTTP. Tato data nejsou správcem webu zpracovávána ani uchovávána. Informace o zpracování dat ze strany Google jsou dostupné na policies.google.com/privacy</strong>.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="gdpr-section">
+          <h2><span class="num">6</span> Vaše práva</h2>
+          <p>V souvislosti se zpracováním osobních údajů máte následující práva:</p>
+          <div class="gdpr-rights-grid">
+            <div class="gdpr-right-card">
+              Právo na přístup              <span>Máte právo získat potvrzení, zda zpracováváme Vaše osobní údaje, a pokud ano, získat k nim přístup včetně informací o zpracování.</span>
+            </div>
+            <div class="gdpr-right-card">
+              Právo na opravu              <span>Máte právo požadovat opravu nepřesných nebo doplnění neúplných osobních údajů.</span>
+            </div>
+            <div class="gdpr-right-card">
+              Právo na výmaz              <span>Máte právo požádat o výmaz osobních údajů, pokud pominul účel zpracování nebo jsou splněny další podmínky dle GDPR.</span>
+            </div>
+            <div class="gdpr-right-card">
+              Právo na omezení zpracování              <span>Za určitých okolností máte právo požádat o omezení zpracování Vašich osobních údajů.</span>
+            </div>
+            <div class="gdpr-right-card">
+              Právo na přenositelnost              <span>Máte právo obdržet osobní údaje, které jste nám poskytli, ve strukturovaném, běžně používaném a strojově čitelném formátu.</span>
+            </div>
+            <div class="gdpr-right-card">
+              Právo vznést námitku              <span>Pokud zpracováváme Vaše údaje na základě oprávněného zájmu, máte právo vznést námitku proti takovému zpracování.</span>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-5);">Svá práva můžete uplatnit zasláním e-mailu na adresu <a href="mailto:info@slacklinehrou.cz" style="color:var(--color-green);font-weight:700;">info@slacklinehrou.cz</a> nebo písemně na adresu sídla. Na Vaši žádost odpovíme bez zbytečného odkladu, nejpozději do 30 dnů.</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="gdpr-section">
+          <h2><span class="num">7</span> Právo podat stížnost</h2>
+          <p>Máte právo podat stížnost u dozorového úřadu, pokud se domníváte, že zpracování Vašich osobních údajů porušuje GDPR. Dozorovým úřadem pro Českou republiku je:</p>
+          <div class="gdpr-highlight">
+            <p>
+              Úřad pro ochranu osobních údajů (ÚOOÚ)</strong><br />
+              Pplk. Sochora 27, 170 00 Praha 7<br />
+              E-mail: posta@uoou.cz &nbsp;|&nbsp; Web: uoou.gov.cz
+            </p>
+          </div>
+          <p>Rádi bychom však jakýkoliv podnět nejprve vyřešili přímo s Vámi — neváhejte nás kontaktovat.</p>
+        </div>
+
+        <!-- 8 -->
+        <div class="gdpr-section">
+          <h2><span class="num">8</span> Změny tohoto dokumentu</h2>
+          <p>Tento dokument můžeme příležitostně aktualizovat, například v reakci na změny právních předpisů nebo způsobu zpracování. Aktuální verze je vždy dostupná na této stránce. Datum poslední aktualizace je uvedeno v záhlaví dokumentu.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" aria-label="Zápatí stránky">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/images/icons/SVG_Logo textové.svg" alt="Slackline Hrou" loading="lazy" style="max-width:260px;width:100%;height:auto;margin-bottom:var(--space-4);" width="160" height="48" />
+        <p class="footer-brand-desc">Přivážíme slackline, giboardy a pohybové hry na školy, firmy, festivaly a veřejné akce. Rovnováha, která baví.</p>
+        <div class="footer-social" aria-label="Sociální sítě">
+          <a href="https://wa.me/420776665913" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.854L.057 23.26a1 1 0 001.223 1.223l5.406-1.467A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.034-1.383l-.36-.213-3.73 1.013 1.013-3.73-.213-.36A9.812 9.812 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/slacklinehrou/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Slacklinehrou" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Nabídka</h4>
+        <ul>
+          <li><a href="pro-skoly.html">Pro školy</a></li>
+          <li><a href="pro-firmy.html">Pro firmy</a></li>
+          <li><a href="pro-verejnost.html">Pro veřejnost</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>O nás</h4>
+        <ul>
+          <li><a href="o-mne.html">Kdo jsme</a></li>
+          <li><a href="o-slackline.html">Co je slackline</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+420776665913" class="contact-item">+420 776 665 913</a></li>
+          <li><a href="mailto:info@slacklinehrou.cz" class="contact-item">info@slacklinehrou.cz</a></li>
+          <li><span class="contact-item">Působíme po celé ČR</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year">2026</span> Slackline Hrou. Všechna práva vyhrazena.</span>
+      <a href="ochrana-osobnich-udaju.html" class="footer-bottom-link">Ochrana osobních údajů</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.min.js"></script>
+</body>
+</html>
