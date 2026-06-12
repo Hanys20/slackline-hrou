@@ -271,6 +271,26 @@ button { cursor: pointer; font-family: var(--font-body); }
   font-weight: 700;
 }
 
+/* ── UI ikony (náhrada emoji) ── */
+.ui-icon {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.2em;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.nav-dropdown-icon .ui-icon { width: 24px; height: 24px; vertical-align: middle; }
+.mobile-nav-icon .ui-icon,
+.mobile-nav-sub-icon .ui-icon { width: 18px; height: 18px; vertical-align: middle; }
+.tag-icon .ui-icon { width: 15px; height: 15px; }
+.type-opt-icon .ui-icon { width: 22px; height: 22px; vertical-align: middle; }
+.step-icon .ui-icon { width: 30px; height: 30px; vertical-align: middle; }
+.benefit-icon .ui-icon { width: 28px; height: 28px; vertical-align: middle; }
+.activity-item-icon .ui-icon { width: 20px; height: 20px; vertical-align: middle; }
+.fact-icon .ui-icon { width: 24px; height: 24px; vertical-align: middle; }
+.badge .ui-icon { width: 14px; height: 14px; }
+
 /* ── Responzivita ── */
 @media (max-width: 768px) {
   :root {
