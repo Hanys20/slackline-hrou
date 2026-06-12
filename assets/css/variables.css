@@ -17,10 +17,10 @@
   --color-beige:        #EFE8D8;       /* sekundární pozadí, karty */
   --color-beige-dark:   #E4DAC8;       /* ohraničení, oddělovače */
 
-  --color-green:        #4d7e24;       /* hlavní zelená */
-  --color-green-light:  #5c9e20;       /* světlejší zelená (kontrastnější) */
+  --color-green:        #68aa31;       /* hlavní zelená */
+  --color-green-light:  #7bc240;       /* světlejší zelená (kontrastnější) */
   --color-green-pale:   #e4f5d0;       /* velmi světlé zelené pozadí boxů */
-  --color-green-dark:   #4e8125;       /* tmavá zelená pro hover */
+  --color-green-dark:   #5a9428;       /* tmavá zelená pro hover */
 
   --color-brown:        #4A2012;       /* tmavě hnědá — nadpisy */
   --color-brown-mid:    #7B4A2D;       /* střední hnědá — detail */

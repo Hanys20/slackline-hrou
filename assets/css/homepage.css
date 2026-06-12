@@ -414,7 +414,7 @@
 }
 @media (max-width: 768px) {
   /* Spící telefon (283.51×98.97): half = 17.46vw */
-  .offer-section { padding-bottom: calc(var(--space-16) + 17.46vw); }
+  .offer-section { padding-top: var(--space-16); padding-bottom: calc(var(--space-16) + 17.46vw); }
 }
 
 .offer-header {
@@ -592,28 +592,19 @@
   gap: 8px;
 }
 .reviews-dot {
-  min-width: 44px;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-beige-dark);
   border: none;
   cursor: pointer;
   padding: 0;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), transform var(--transition-fast);
 }
-.reviews-dot::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-beige-dark);
-  transition: background var(--transition-fast), width var(--transition-fast), border-radius var(--transition-fast);
-}
-.reviews-dot.active::before {
+.reviews-dot.active {
   background: var(--color-green);
-  width: 20px;
-  border-radius: 4px;
+  transform: scale(1.4);
 }
 
 .review-card {
@@ -780,7 +771,7 @@
 .quote-blob {
   background:
     linear-gradient(rgba(78, 129, 37, 0.78), rgba(78, 129, 37, 0.78)),
-    url('../images/hero/terka-verejnost-hero.jpg') center / cover no-repeat;
+    url('../images/hero/terka-verejnost-hero.webp') center / cover no-repeat;
   border-radius: var(--radius-2xl);
   padding: var(--space-12) var(--space-12);
   text-align: left;
