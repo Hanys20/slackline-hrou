@@ -250,6 +250,7 @@
   cursor: pointer;
   border-radius: var(--radius-md);
   transition: background var(--transition-fast);
+  position: relative;
 }
 .nav-hamburger:hover { background: var(--color-green-pale); }
 .nav-hamburger span {
@@ -258,10 +259,11 @@
   height: 2.5px;
   background: var(--color-brown);
   border-radius: 2px;
-  transition: transform var(--transition-normal), opacity var(--transition-normal);
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
+.nav-hamburger.open span { background: var(--color-green-dark); }
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
 /* ── Mobilní menu panel ── */

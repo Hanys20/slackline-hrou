@@ -289,7 +289,7 @@ button { cursor: pointer; font-family: var(--font-body); }
 .benefit-icon .ui-icon { width: 28px; height: 28px; vertical-align: middle; }
 .activity-item-icon .ui-icon { width: 20px; height: 20px; vertical-align: middle; }
 .fact-icon .ui-icon { width: 24px; height: 24px; vertical-align: middle; }
-.badge .ui-icon { width: 14px; height: 14px; }
+.badge .ui-icon { width: 14px; height: 14px; filter: brightness(0) saturate(100%) invert(52%) sepia(47%) saturate(560%) hue-rotate(58deg) brightness(90%); }
 
 /* ── Responzivita ── */
 @media (max-width: 768px) {
@@ -300,4 +300,5 @@ button { cursor: pointer; font-family: var(--font-body); }
     --section-gap: var(--space-16);
   }
   .container { padding: 0 var(--space-4); }
+  .section-title { font-size: 1.75rem; }
 }

@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
-          submitBtn.textContent = '✓ Odesláno! Ozveme se co nejdříve.';
+          submitBtn.textContent = '✓ Děkujeme za zprávu!';
           submitBtn.style.background = 'var(--color-green-dark)';
           form.querySelectorAll('input, textarea, select').forEach(el => { el.disabled = true; });
         } else {

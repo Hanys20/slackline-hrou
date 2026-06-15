@@ -142,7 +142,7 @@
 </section>
 
 <!-- Lenochod přechod: hero → stats -->
-<div class="sloth-divider--boundary" aria-hidden="true">
+<div class="sloth-divider--boundary sloth-divider--hero-stats" aria-hidden="true">
   <div class="sloth-divider--boundary-inner">
     <img class="sloth-img--desktop" src="assets/images/icons/SVG_Zavěšený delší.svg" alt="" loading="lazy" width="220" height="220" />
     <img class="sloth-img--mobile" src="assets/images/icons/SVG_Zavěšený kratší.svg" alt="" loading="lazy" width="220" height="220" />
@@ -199,6 +199,14 @@
 </section>
 
 
+<!-- Lenochod přechod: stats → nabídka (pouze mobil) -->
+<div class="sloth-divider--boundary sloth-divider--stats-offer" aria-hidden="true">
+  <div class="sloth-divider--boundary-inner">
+    <img class="sloth-img--desktop" src="assets/images/icons/SVG_Zavěšený delší.svg" alt="" loading="lazy" width="220" height="220" />
+    <img class="sloth-img--mobile" src="assets/images/icons/SVG_Zavěšený kratší.svg" alt="" loading="lazy" width="220" height="220" />
+  </div>
+</div>
+
 <!-- ══════════════════════════════════
      NABÍDKA (3 karty)
 ══════════════════════════════════ -->
@@ -252,7 +260,7 @@
 </section>
 
 <!-- Lenochod přechod: nabídka → recenze -->
-<div class="sloth-divider--boundary" aria-hidden="true">
+<div class="sloth-divider--boundary sloth-divider--offer-reviews" aria-hidden="true">
   <div class="sloth-divider--boundary-inner">
     <img class="sloth-img--desktop" src="assets/images/icons/SVG_Spíci delší.svg" alt="" loading="lazy" width="220" height="220" />
     <img class="sloth-img--mobile" src="assets/images/icons/SVG_Spíci kratší.svg" alt="" loading="lazy" width="220" height="220" />
@@ -406,17 +414,6 @@
 
         </div>
 
-        <div class="contact-tips-box" style="margin-top:var(--space-3);">
-          <h3 class="contact-tips-title">Co napsat do zprávy?</h3>
-          <ul class="contact-tips-list">
-            <li>termín akce</li>
-            <li>místo konání</li>
-            <li>přibližný počet účastníků</li>
-            <li>typ akce (škola, firma, festival…)</li>
-            <li>vaše představa nebo požadavek</li>
-          </ul>
-
-        </div>
       </div>
 
       <!-- Formulář vpravo -->
@@ -479,6 +476,17 @@
           </div>
           <p style="font-size:var(--text-xs);color:var(--color-text-light);margin-top:var(--space-3);text-align:center;"><img src="assets/images/icons/ui/lock_152462.svg" alt="" class="ui-icon" /> Vaše údaje jsou u nás v bezpečí. Ozveme se co nejdříve!</p>
         </form>
+      </div>
+
+      <!-- Tips box – desktop: levý sloupec řádek 2; mobil: pod formulářem -->
+      <div class="contact-tips-box">
+        <h3 class="contact-tips-title">Co napsat do zprávy?</h3>
+        <ul class="contact-tips-list">
+          <li>termín akce</li>
+          <li>místo konání</li>
+          <li>přibližný počet účastníků</li>
+          <li>vaše představa nebo požadavek</li>
+        </ul>
       </div>
 
     </div>
@@ -547,5 +555,6 @@
 </footer>
 
 <script src="assets/js/main.min.js"></script>
+
 </body>
 </html>
