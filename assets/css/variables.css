@@ -85,7 +85,7 @@
   /* ── Layout ── */
   --container-max: 1200px;
   --container-pad: var(--space-6);
-  --nav-height:    104px;
+  --nav-height:    84px;
   --section-gap:   var(--space-20);
 }
 

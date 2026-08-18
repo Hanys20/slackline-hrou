@@ -67,7 +67,9 @@
   max-width: 480px;
   margin-left: auto;
 }
+/* Zobrazen pouze v mobilní verzi (foto pod obsahem) – viz media query níže */
 .subpage-hero-visual .hero-mascot-float {
+  display: none;
   position: absolute;
   top: auto;
   bottom: 3%;
@@ -686,6 +688,7 @@
   .subpage-hero--omne { padding-bottom: var(--space-20) !important; }
   .subpage-hero-image { order: 1; margin-top: var(--space-5); }
   .subpage-hero-visual { margin: 0 auto; }
+  .subpage-hero-visual .hero-mascot-float { display: block; }
   .subpage-hero-blob { max-width: 300px; margin: 0 auto; }
   .subpage-hero-lead { margin-left: auto; margin-right: auto; }
   .activities-grid { grid-template-columns: 1fr; }

@@ -92,7 +92,9 @@
 }
 
 /* Cedule – procentuální pozice vůči skupině → škáluje automaticky */
+/* Zobrazena pouze v mobilní verzi (foto pod obsahem) – viz media query níže */
 .hero-cedule {
+  display: none;
   position: absolute;
   bottom: 9%;
   right: -3%;
@@ -1232,6 +1234,7 @@
     gap: 0;
   }
   .hero-image-wrap { order: 1; }
+  .hero-cedule { display: block; }
   .hero-subtitle { margin-left: auto; margin-right: auto; }
   .hero-ctas { justify-content: center; }
   .hero-features { justify-content: center; }
