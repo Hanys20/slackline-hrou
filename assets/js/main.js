@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Form submission (Formspree AJAX) ────────
-  const FORMSPREE_URL = 'https://formspree.io/f/xojzkvwv';
+  const FORMSPREE_URL = 'https://formspree.io/f/xeajvarj';
 
   document.querySelectorAll('.contact-form, form[novalidate]').forEach(form => {
     form.addEventListener('submit', async e => {
