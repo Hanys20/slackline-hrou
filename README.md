@@ -44,6 +44,43 @@ slackline-hrou/
 
 ---
 
+## ☁️ Nasazení – Cloudflare Workers (Static Assets)
+
+Projekt se nasazuje jako statický web přes **Cloudflare Workers** (ne Pages).
+Konfigurace je v `wrangler.jsonc` – Workers servíruje soubory přímo z repozitáře
+bez nutnosti vlastního JS kódu (tzv. *assets-only Worker*), 404 stránky řeší
+`404.html` v rootu.
+
+### Lokální vývoj
+```bash
+npm install
+npm run dev      # spustí lokální dev server (wrangler dev)
+```
+
+### Nasazení (ruční, přes CLI)
+```bash
+npx wrangler login   # jednorázově propojí CLI s Cloudflare účtem
+npm run deploy        # nahraje web jako Worker "slackline-hrou"
+```
+
+### Nasazení přes Git (doporučeno – automatický deploy při push)
+1. V Cloudflare dashboardu: **Workers & Pages → Create → Workers → Connect to Git**
+2. Vyberte tento repozitář a větev, ze které se má nasazovat (např. `main`)
+3. Build command nechte prázdný (statický web, žádný build krok)
+4. Deploy command: `npx wrangler deploy`
+5. Cloudflare od teď nasadí novou verzi automaticky při každém push
+
+Soubory, které se do Workeru nemají nahrávat (README, poznámky, `.claude` apod.),
+jsou vyloučené v `.assetsignore`.
+
+> **Migrace z Pages:** pokud jste tento projekt dřív nasazovali přes Cloudflare
+> Pages, po ověření, že nový Workers projekt funguje, smažte starý Pages
+> projekt v dashboardu (**Workers & Pages → [projekt] → Settings → Delete
+> project**). Toto musí provést vlastník Cloudflare účtu ručně – Claude k
+> vašemu Cloudflare účtu nemá přístup.
+
+---
+
 ## 🎨 Font: Chaloops (Adobe Fonts)
 
 Font **Chaloops** je dostupný přes Adobe Fonts (vyžaduje předplatné Adobe CC).

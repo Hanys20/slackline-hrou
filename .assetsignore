@@ -1,0 +1,11 @@
+.git
+.github
+.claude
+node_modules
+package.json
+package-lock.json
+wrangler.jsonc
+.assetsignore
+README.md
+podklady_text.txt
+Slackline hrou podklady
