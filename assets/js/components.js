@@ -146,7 +146,7 @@
         <h4>Kontakt</h4>
         <ul>
           <li><a href="tel:+420776665913" class="contact-item">+420 776 665 913</a></li>
-          <li><a href="mailto:info@slacklinehrou.cz" class="contact-item">info@slacklinehrou.cz</a></li>
+          <li><a href="mailto:slacklinehrou@gmail.com" class="contact-item">slacklinehrou@gmail.com</a></li>
           <li><span class="contact-item">Působíme po celé ČR</span></li>
         </ul>
       </div>
